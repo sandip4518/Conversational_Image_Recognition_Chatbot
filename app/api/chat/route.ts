@@ -18,8 +18,8 @@ export async function POST(req: NextRequest) {
     // Use gemini-2-flash for better speed and efficiency
 const modelName =
 typeof lastMessage.content !== "string" && lastMessage.content.image_url
-  ? "gemini-2.0-flash" // Updated to Gemini 2.0 Flash
-  : "gemini-2.0-flash"; // Use the same model for both text and image inputs
+  ? "gemini-2.5-flash" // Updated to Gemini 2.0 Flash
+  : "gemini-2.5-flash"; // Use the same model for both text and image inputs
 
 const model = genAI.getGenerativeModel({ model: modelName });
 
